@@ -38,7 +38,24 @@ int main (){
 
 //Q.2.1 A program is required to prompt for and accept a time and compute the number of 
 //seconds elapsed since midnight. The time should be entered in the format  HH:MM:SS.
+/*
+#include <iostream>
+using namespace std;
 
+int main()
+{
+ cout <<"Hello World" <<endl;
+ 
+ char line2[] = "10:20:20";
+ cin >> line2;
+ int h,m,s;
+ sscanf_s(line2, "%d:%d:%d", 8h, 8m, 8s);
+ cout <<"Hours: "<<h<<endl;
+ cout <<"min: "<<m<<endl;
+ cout <<"Seconds: "<<s<<endl;
+ return 0;
+}
+*/
 
 //Q.3 The area of a rectangle is the rectangle’s length times its width. Write a program that 
 //asks for the length and width of two rectangles. The program should tell the user 
