@@ -104,4 +104,83 @@ int main()
     return 0;
 }
 
+// Q.4 Write a program that reads in two integers and determines and prints if the first is a 
+// multiple of the second. 
+#include <iostream>
 
+using namespace std;
+
+int main()
+{
+	int n1, n2;
+
+	cout << "Enter Two Intiger" << endl;
+	cin >> n1 >> n2;
+	if (n1 % n2 == 0) {
+		cout << n1 << " is multiple of " << n2;
+	}
+	else if (n1 % n2)
+	{
+		cout << n1 << " is not multiple of " << n2;
+	}
+	return 0;
+}
+
+//Q.5 Write a program that asks the user to enter a number within the range of 1 through 10.
+//Use a switch statement to display the Roman numeral version of that number.
+//Input validation : Do not accept a number less than 1 or greater than 10.
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int number;
+	cout << "Enter a Number between 1-10" << endl;
+	cin >> number;
+	switch (number)
+	{
+	case 1:
+		cout << "The Roman number version of " << number << " is";
+		cout << "I";
+		break;
+	case 2:
+		cout << "The Roman number Version of" << number << "is";
+		cout << "II";
+		break;
+	case 3:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "III";
+		break;
+	case 4:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "IV";
+		break;
+	case 5:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "V";
+		break;
+	case 6:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "VI";
+		break;
+	case 7:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "VII";
+		break;
+	case 8:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "VIII";
+		break;
+	case 9:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "VIIII";
+		break;
+	case 10:
+		cout << "The Roman number Version of" << number << " is";
+		cout << "X";
+		break;
+	default:cout << "Enter a number in the range (1- 10)"; break;
+	}
+	return 0;
+}
