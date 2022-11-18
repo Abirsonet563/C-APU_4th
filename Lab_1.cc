@@ -246,3 +246,59 @@ int main()
 		
 	return 0;
 }
+//Part D Q.1 Compute the total cost of a meal inclusive of GST (Goods and Service Tax) and 
+//tipping. Assume that the GST is fixed at 6% but the amount to tip will depend on the 
+//customer. Your program should input the cost of the meal (before GST and tipping) 
+//and the tip amount (to be input as a percentage).
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	double cost, tips,gst,gst1, total;
+	cout << "Type The amount of Cost and GST in Percent: " << endl;
+	cin >> cost >> tips;
+	gst = 6.00 / 100 * cost;
+	tips = tips / 100 * cost;
+	gst1 = tips + cost;
+	total = (cost + gst + tips);
+	cout << "The total cost of the meal BEFORE GST and tipping: " << cost <<endl;
+	cout << "The total cost of the meal AFTER GST: " << gst1 << endl;
+	cout << "The total cost of the meal AFTER GST and tipping: " << total << endl;
+
+
+		
+	return 0;
+}
+
+//Part D Q.3 Write a C++ program ask to the user to enter number of rows for diamond dimension 
+//to print the diamond pattern, then display the result on the screen. Note: Must use 
+//loops to print the diamond.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, j, r;
+    cout << "\n\n Display the pattern like a diamond:\n";
+    cout << "----------------------------------------\n";
+    cout << " Input number of rows (half of the diamond): ";
+    cin >> r;
+   
+    for (i = 0; i <= r; i++)
+    {
+        for (j = 1; j <= r - i; j++)
+            cout << " ";
+        for (j = 1; j <= 2 * i - 1; j++)
+            cout << "*";
+           cout << endl;
+    }
+    for (i = r; i >= 1; i--)
+    {
+        for (j = 1; j <= r - i; j++)
+            cout << " ";
+        for (j = 1; j <= 2 * i - 1; j++)
+            cout << "*";
+        cout << endl;
+    }
+}
