@@ -184,3 +184,65 @@ int main()
 	}
 	return 0;
 }
+
+// Part C Q.1 Write a program that able to print the even number that in the between of 1 to 50.
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for (int i = 0; i < 51; i++)
+		if (i % 2 == 0)
+		{
+			cout << "Even Number is :" << i << endl;
+		}
+		
+	return 0;
+}
+
+// Part C Q.2 Write a program that asks the user for a positive integer value. The program should use a 
+//loop to get the sum of all the integers from 1 up to the number entered. For example, if 
+//the user enters 50, the loop will find the sum of 1, 2, 3, 4, … 50.
+//Input validation: Do not accept a negative number.
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+int num, sum1 =0;
+do
+{
+	cout << "Enter Your Positive Number: " << endl;
+	cin >> num;
+} while (num < 0);
+
+for (int k = 0; k <= num; k++)
+
+	sum1 = sum1 + k;
+	cout << "Total Number: " <<sum1 << endl;
+
+		
+	return 0;
+}
+
+// Part C Q.3 Calories Burned: 
+//Running on a particular treadmill you burn 3.9 calories per minute. Write a program that 
+//uses a loop to display the number of calories burned after 10, 15, 20, 25, and 30 minutes.
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int total;
+	for (int i = 1; i < 30; i++)
+	{
+		i += 4;
+		total = i * 3.9;
+		cout << "You have burn: " << total << " Calories in "<<i<<" Minutes" << endl;
+	}
+
+		
+	return 0;
+}
