@@ -53,6 +53,39 @@ int main()
 array size = 5
 Elements = { 10, 2, 5, 0, 30}
 
+//AlterNative Answer From Lecturer
+# include <iostream>
+using namespace std;
+/* function definition */
+int sum(int arr[], int len){
+    int sum = 0;
+    for (int i = 0; i < len; i++)
+    {
+        sum += arr[i];    
+    }
+    return sum;
+}
+int main()
+{
+    cout << "==== TUTORIAL 2 ====" << endl;
+    int billy[] = {16, 2, 77, 40, 12071, 51};
+    //compute the length of arr
+    int len = sizeof(billy) / sizeof(billy[0]);
+    int total = sum(billy, len);
+    for (int i = 0; i < len; i++)
+    {
+        cout << billy[i];
+        if( i == (len-1) )
+        {
+            cout << " = " << total << endl;
+            break;
+        } else{
+            cout << " + ";
+        }
+    }
+    return 0;
+}
+
 //B.2 Write a C++ program to store and calculate the sum of 5 numbers entered by the user 
 //using arrays.
 #include <iostream>
@@ -89,6 +122,45 @@ int main(void) {
 
     std::cout << "\nsum: " << sum << '\n';
 }
+
+// Answer From Lecturer
+# include <iostream>
+using namespace std;
+/* function definition */
+int sum(int arr[], int len){
+    int sum = 0;
+    for (int i = 0; i < len; i++)
+    {
+        sum += arr[i];    
+    }
+    return sum;
+}
+int main()
+{
+    cout << "==== TUTORIAL 2 ====" << endl;
+    const int LENGTH = 5;
+    int arr[LENGTH];
+    //prompt the user for input
+    for (int i = 0; i < LENGTH; i++)
+    {
+        cout << "Enter your number " << (i+1) << " : ";
+        cin >> arr[i];
+    }
+    //compute sum thru function call
+    int total = sum(arr, LENGTH);
+    for (int i = 0; i < LENGTH; i++)
+    {
+        cout << arr[i];
+        if( i == (LENGTH-1) )
+        {
+            cout << " = " << total << endl;
+            break;
+        } else{
+            cout << " + ";
+        }
+    }
+    return 0;
+}
 //1. Part B Write a program that checks if a given array is a Palindrome. Palindrome is a number 
 //that remains the same when its digits are reversed. Like 16461
 
@@ -118,6 +190,42 @@ int main() {
     else
     {
         cout << "Not Palindrome" << endl;
+    }
+    return 0;
+}
+
+//Part -B 4(Write a program to create and add two matrices.)
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int M1 [10][10], M2[10][10], Res[10][10];
+    int R,C,i,j;
+    cout<<"Enter The Size Of Matrix: ";
+    cin >> R >>C;
+    cout<<endl<<"First Metrix: ";
+    
+    for (i = 0; i<R; i++)
+    {
+        for (j=0; j<C; j++)
+        cin>>M1[i][j];
+    }
+       cout<<endl<<"Second Metrix: ";
+    
+    for (i = 0; i<R; i++)
+    {
+        for (j = 0; j<C; j++)
+        cin>>M2[i][j];
+      cout<<endl<<"Sum 0f Two Metrix: "<<endl;  
+    }for (i = 0; i<R; i++)
+    {
+        for (j = 0; j<C; j++)
+        {
+            Res[i][j] = M1[i][j]+M2[i][j];
+            cout<<Res[i][j]<<" ";
+        }
+        cout<<endl;
     }
     return 0;
 }
